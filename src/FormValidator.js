@@ -1,18 +1,10 @@
-class FormValidator {
+export default class FormValidator {
     constructor(formV) {
         this.formV = formV;
         this.setEventListeners = this.setEventListeners.bind(this);
     }
   
-    /*
-        Можно лучше: сообщения об ошибках вынести в отдельный объект, а не хардкодить их в методе
-        errorMessages = {
-            empty: 'Это обязательное поле',
-            wrongLength: 'Должно быть от 2 до 30 символов'
-            ......
-        }
-        Если понадобится перевести приложение на другой язык можно будет передавать другой объект
-  */
+    
     checkInputValidity (inputElement, errorMessageElement) {
         if (inputElement.value.length === 0) {
         errorMessageElement.textContent = 'Это обязательное поле';

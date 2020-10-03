@@ -1,4 +1,4 @@
-class Popup {
+export default class Popup {
 	constructor(element, openClass) {
         this.element = element;
 		this.element.querySelector('.popup__close').addEventListener("click", () => this.close());

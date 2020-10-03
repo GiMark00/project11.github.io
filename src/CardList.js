@@ -1,9 +1,5 @@
-class CardList {
-/* 
-	Можно лучше: массив карточек лучше передавать не в конструктор, а в метод render, т.к.
-	в следующей проектной работе карточки будут приходить с сервера и при создании класс CardList
-	их у нас ещё не будет
-*/
+export default class CardList {
+
   constructor(container, api, createCardFunction) {
     this.container = container;
     this.api = api;

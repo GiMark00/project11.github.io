@@ -4,8 +4,9 @@
   "description": "none",
   "main": "Api.js",
   "scripts": {
-    "build": "webpack --mode production",
-    "dev": "webpack-dev-server --mode development --open --watch"
+    "build": "rimraf dist && cross-env NODE_ENV=production webpack --mode production",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch",
+    "deploy": "cross-env NODE_ENV=production gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -16,26 +17,35 @@
   "bugs": {
     "url": "https://github.com/GiMark00/project11.github.io/issues"
   },
-  "homepage": "https://github.com/GiMark00/project11.github.io#readme",
+  "homepage": "https://github.com/GiMark00/project11.github.io",
   "devDependencies": {
     "@babel/cli": "^7.11.6",
     "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/preset-env": "^7.11.5",
-    "autoprefixer": "^10.0.1",
+    "@babel/preset-react": "^7.10.4",
+    "autoprefixer": "^9.8.6",
     "babel-loader": "^8.1.0",
+    "cross-env": "^7.0.2",
     "css-loader": "^4.3.0",
     "cssnano": "^4.1.10",
-    "gh-pages": "^3.1.0",
+    "file-loader": "^6.1.0",
+    "gh-pages": "~2.0.1",
     "html-webpack-plugin": "^4.5.0",
+    "image-webpack-loader": "^7.0.1",
     "mini-css-extract-plugin": "^0.11.2",
-    "postcss-loader": "^4.0.2",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "postcss-loader": "^4.0.3",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
     "webpack-md5-hash": "0.0.6"
   },
   "dependencies": {
-    "babel-polyfill": "^6.26.0",
-    "core-js": "^3.4.1"
+    "@babel/polyfill": "^7.0.0",
+    "core-js": "^3.4.1",
+    "lodash": "^4.17.20",
+    "lodash.chunk": "^4.2.0",
+    "style-loader": "^1.2.1"
   }
 }

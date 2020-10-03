@@ -1,15 +1,6 @@
-/*
-  Класс сделан отлично!
-*/
 
-class Card {
-  /* 
-      Можно лучше: лучше передавать не отдельные параметры, а сразу весь объект с данными карточки,
-      т.к. представьте что у карточки появится ещё одно свойство (например author) которое нужно будет отобразить
-      Если у нас создание карточки вызывается как new Card(name,link), придется во всех местах
-      где вызывается создание карточки переписывать её вызов с new Card(name,link)  на new Card(name, link, author) 
-      Если ли же мы передаем просто объект карточки в функцию ( new Card(cardData) ) нам придется гораздо меньше менять программу
-  */
+export default class Card {
+ 
   constructor(name, link, imagePopupOpen, template) {
     this.name = name;
     this.link = link;
@@ -53,9 +44,7 @@ class Card {
 }
 
   openPopup = (event) => {
-    /*
-      Можно лучше: передавать сразу this.link, а не event.target
-    */
+    
     this.imagePopupOpen(event.target);
   }
 }
