@@ -2,7 +2,7 @@
   "name": "project9",
   "version": "1.0.0",
   "description": "none",
-  "main": "Api.js",
+  "main": "./src/script.js",
   "scripts": {
     "build": "rimraf dist && cross-env NODE_ENV=production webpack --mode production",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch",
